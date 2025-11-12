@@ -11,8 +11,8 @@ import { Button } from '@/app/ui/button';
 import { useActionState } from 'react';
 import { createInvoice, State } from '@/app/lib/actions';
 
-function createInvoiceAction(prevState: any, formData: FormData) {
-  return createInvoice(formData);
+function createInvoiceAction(prevState: State, formData: FormData) {
+  return createInvoice(prevState, formData);
 }
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
